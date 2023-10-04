@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lavaira.checklistapp.view.fragment.registration.VerificationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:background="@color/color_white"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorIndigo"
+            app:progress_visibility="@{viewModel.loadingStatus}" />
+
+
+        <ImageView
+            android:id="@+id/ivBgImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/bg_verify" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            fontPath="fonts/Poppins-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/otp_screen_info"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:textSize="@dimen/_16ssp" />
+
+
+        <com.mukesh.OtpView
+            android:id="@+id/otpView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:itemBackground="@color/color_white"
+            android:textColor="@android:color/black"
+            app:itemCount="6"
+            app:lineColor="@color/common_google_signin_btn_text_light_default"
+            app:viewType="line" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            error="@{viewModel.otpFieldErrorValue}"
+            android:textColor="#8B0000"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_25sdp"/>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:id="@+id/btnVerify"
+            style="@style/BlueButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.validateOtp()}"
+            android:text="@string/verify_screen_verify" />
+
+
+        <Button
+            android:id="@+id/btnResend"
+            style="@style/BlueButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->viewModel.resendOtp()}"
+            android:text="@string/verify_screen_resend_otp"
+            android:layout_marginBottom="@dimen/_20sdp"/>
+
+    </LinearLayout>
+</layout>

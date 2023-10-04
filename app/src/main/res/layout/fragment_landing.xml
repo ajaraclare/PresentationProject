@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lavaira.checklistapp.view.fragment.landing.LandingViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:background="@color/color_white"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorIndigo"
+            app:progress_visibility="@{viewModel.loadingStatus}" />
+
+        <ImageView
+            android:id="@+id/ivBgImage"
+            android:layout_below="@id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_marginTop="-15dp"
+            android:src="@drawable/bg_landing2" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            fontPath="fonts/Poppins-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivBgImage"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/landing_screen_title"
+            android:textSize="@dimen/_22ssp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="@string/landing_screen_subtitle"
+            android:textSize="@dimen/_16ssp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tipPhone"
+            field_error="@{viewModel.phoneNumberFieldError}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSubtitle"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_screen_mobile"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:text="@={viewModel.phoneNumberField}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnLgoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:background="@drawable/btn_rounded_corner"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="@{()->viewModel.doRegister()}"
+                android:text="@string/landing_screen_login"
+                android:textColor="@color/color_white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lavaira.checklistapp.view.fragment.dashboard.AddTaskViewModel" />
+
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout android:id="@+id/llTitleSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+
+            <EditText android:id="@+id/etTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:hint="@string/title"
+                android:text="@={viewModel.taskTitle}"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_16ssp"
+                android:singleLine="true"/>
+
+            <ImageButton android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_delete_24px"
+                android:onClick="@{()->viewModel.deleteTask()}"/>
+
+        </LinearLayout>
+
+
+        <EditText android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTitleSection"
+            android:hint="@string/description"
+            android:text="@={viewModel.taskDesc}"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_16ssp"/>
+
+        <LinearLayout android:id="@+id/llDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDescription"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_15sdp"
+            android:weightSum="2">
+
+            <EditText android:id="@+id/etStartDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:hint="@string/start_date"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:text="@={viewModel.startDate}"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/_16ssp"/>
+
+            <EditText android:id="@+id/etEndDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@={viewModel.endDate}"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:hint="@string/end_date"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/_16ssp"/>
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_below="@id/llDates"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/btn_rounder_corner_black"
+            android:text="@={viewModel.status}"
+            android:onClick="@{()->viewModel.changeTaskStatus()}"
+            android:textColor="#006400" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_below="@id/btnStatus"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            style="@style/BlueButtonStyle"
+            android:text="@string/save"
+            android:onClick="@{()->viewModel.addTask()}"
+            android:textColor="@color/color_white" />
+
+
+
+    </RelativeLayout>
+</layout>

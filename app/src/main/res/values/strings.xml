@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">ChecklistApp</string>
+    <string name="title_verification">Verification</string>
+    <string name="title_Profile">Profile</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="article_icon">Article Icon</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="no_data"> No data available !!!</string>
+
+
+    <!-- Network Errors-->
+    <string name="networkError">Oh! You are not connected to a wifi or cellular data network. Please connect and try
+        again
+    </string>
+    <string name="networkErrorCode">NO_INTERNET_CONNECTION</string>
+    <string name="requestTimeOutErrorCode">REQUEST_TIME_OUT</string>
+    <string name="unknownError">Something went wrong!</string>
+    <string name="requestTimeOutError">Oooops! We couldn’t capture your request in time. Please try again.</string>
+    <string name="errorCodeMalformedJson">MALFORMED_JSON</string>
+    <string name="responseMalformedJson">Oops! We hit an error. Try again later.</string>
+    <string name="landing_screen_title">Manage your tasks efficiently</string>
+    <string name="landing_screen_subtitle">We would be needing your UAE number to get you onboarded.</string>
+    <string name="landing_screen_register">New User? Register Now</string>
+    <string name="landing_screen_login">Get Started</string>
+    <string name="register_screen_create_account">User Profile</string>
+    <string name="register_screen_fullname">First Name</string>
+    <string name="register_screen_lastname">Last Name</string>
+    <string name="register_screen_email">Email</string>
+    <string name="register_screen_address">Address</string>
+    <string name="register_screen_mobile">Mobile Number</string>
+    <string name="register_screen_password">Password</string>
+    <string name="register_screen_confirm_password">Confirm Password</string>
+    <string name="register_screen_terms">By registering, you confirm that you accept our terms and conditions and service agreement</string>
+    <string name="register_screen_signup_fb">Signup with Facebook</string>
+    <string name="register_screen_signup_google">Signup with Google</string>
+    <string name="register_screen_save">Save</string>
+    <string name="verify_screen_verify">Verify</string>
+    <string name="verify_screen_resend_otp">Resend OTP</string>
+    <string name="error_msg_invalid_email">Invalid email address</string>
+    <string name="error_msg_invalid_phone">Invalid UAE number.</string>
+    <string name="error_msg_pw_cant_empty">Password can\'t be empty</string>
+    <string name="error_msg_pw_length">Password length should be between 6\-20 characters</string>
+    <string name="error_msg_pw_mismatch">Passwords doesn\'t match</string>
+    <string name="error_msg_invalid_firstname">First name can\'t be empty</string>
+    <string name="error_msg_invalid_lastname">Last name can\'t be empty</string>
+    <string name="error_msg_invalid_address">Address can\'t be empty</string>
+    <string name="error_msg_invalid_otp">Invalid otp</string>
+    <string name="otp_screen_info">Please enter the 6 digit OTP received on your mobile number to verify your account </string>
+    <string name="error_msg_empty"></string>
+    <string name="type_your_task_title_here">Type your task title here</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+</resources>

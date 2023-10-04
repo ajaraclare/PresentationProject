@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+    <style name="TextBoldStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextInputStyle">
+        <item name="android:layout_marginStart">@dimen/_35sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_35sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="BaseButtonStyle">
+        <item name="android:layout_marginStart">@dimen/_35sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_35sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
+    <style name="BlueButtonStyle" parent="BaseButtonStyle">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:background">@color/colorIndigo</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="FBButtonStyle" parent="BaseButtonStyle">
+        <item name="android:textColor">@color/colorFB</item>
+        <item name="android:background">@color/color_white</item>
+        <item name="android:drawableStart">@drawable/ic_facebook</item>
+    </style>
+
+
+    <style name="GoogleButtonStyle" parent="BaseButtonStyle">
+        <item name="android:textColor">@color/colorGoogle</item>
+        <item name="android:background">@color/color_white</item>
+        <item name="android:drawableStart">@drawable/ic_google_plus</item>
+    </style>
+
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+</resources>

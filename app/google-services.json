@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385613855233",
+    "firebase_url": "https://checklistapp-b0556.firebaseio.com",
+    "project_id": "checklistapp-b0556",
+    "storage_bucket": "checklistapp-b0556.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385613855233:android:1f101e42eb8b5600c2de00",
+        "android_client_info": {
+          "package_name": "com.lavaira.checklistapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385613855233-ha6gv9qb8fdqkeue4oo963boii43hm4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs0u_HdtnJ9Rvyfp8Bi9yeI2IrHG_hPbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385613855233-ha6gv9qb8fdqkeue4oo963boii43hm4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
